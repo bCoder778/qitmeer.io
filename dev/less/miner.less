@@ -1,0 +1,208 @@
+.miner-wrap {
+    .miner-banner {
+        width                : 100%;
+        height               : 538px;
+        background           : url('/assets/images/miner-banner.png') no-repeat;
+        background-position-x: 50%;
+
+        .miner-sub {
+            font-size     : 23px;
+            color         : #FFFFFF;
+            letter-spacing: 0;
+            width         : 640px;
+            line-height   : 40px;
+            margin-top    : 230px;
+        }
+    }
+
+    .miner-content {
+        // padding    : 80px auto;
+        padding-top   : 80px;
+        padding-bottom: 80px;
+
+        .miner-img {
+            margin-bottom: 40px;
+        }
+
+        .miner-img1 {
+            width: 1000px;
+        }
+
+        .miner-img2 {
+            width: 800px;
+        }
+
+        .miner-title {
+            font-size     : 36px;
+            color         : #090909;
+            letter-spacing: 0;
+            line-height   : 35px;
+            display       : flex;
+            align-items   : center;
+            flex-direction: column;
+            margin-bottom : 46px;
+
+            &::after {
+                content   : '';
+                display   : block;
+                height    : 1px;
+                width     : 90px;
+                background: #04C1AC;
+                margin-top: 27px;
+            }
+        }
+
+        .miner-content-wrap {
+            display       : flex;
+            flex-direction: row;
+
+            .miner-download {
+                display       : flex;
+                flex-direction: column;
+            }
+
+            .downloadTitle {
+                font-size    : 24px;
+                font-weight  : bold;
+                color        : #000;
+                margin-bottom: 30px;
+            }
+
+            .download {
+                font-size    : 18px;
+                background   : #04c1ac;
+                padding      : 5px;
+                color        : #fff;
+                font-weight  : bold;
+                text-align   : center;
+                margin-bottom: 10px;
+                width        : 100%;
+                display      : inline-block;
+            }
+
+            .download-menu-content {
+                padding: 15px;
+            }
+
+            .download-menu {
+                display                : none;
+                position               : fixed;
+                width                  : 600px;
+                min-height             : 100px;
+                padding                : 20px 0;
+                /* display             : flex; */
+                /* justify-content     : center; */
+                /* align-items         : center; */
+                top                    : 50%;
+                left                   : 50%;
+                margin-left            : -300px;
+                margin-top             : -50px;
+                z-index                : 1000;
+                font-size              : 16px;
+                text-align             : center;
+                background-color       : #fff;
+                -webkit-background-clip: padding-box;
+                background-clip        : padding-box;
+                border-radius          : 4px;
+                -webkit-box-shadow     : 0 6px 12px rgba(0, 0, 0, .175);
+                box-shadow             : 0 6px 12px rgba(0, 0, 0, .175);
+
+                .menu-download {
+                    font-size   : 20px;
+                    background  : #04c1ac;
+                    margin-right: 15px;
+                    color       : #fff;
+                    padding     : 3px 20px;
+                }
+
+                .close {
+                    width     : 100%;
+                    margin-top: 50px;
+                }
+
+                .baidu {
+                    display   : none;
+                    margin-top: 20px;
+
+                    & p {
+                        text-align  : left;
+                        padding-left: 100px;
+                    }
+
+                    .modal-sub {
+                        font-size   : 16px;
+                        color       : #090909;
+                        margin-right: 10px;
+                        width       : 50px;
+                        display     : inline-block;
+                    }
+                }
+
+                .local-list {
+                    display   : none;
+                    width     : 80%;
+                    margin    : 0 auto;
+                    list-style: none;
+                    margin-top: 20px;
+
+                    li {
+                        border-bottom  : 1px solid #ccc;
+                        line-height    : 30px;
+                        display        : flex;
+                        flex-direction : row;
+                        justify-content: space-between;
+                    }
+                }
+            }
+
+            .download-wrap {
+                display: block;
+            }
+
+        }
+
+
+
+        .miner-item {
+            width         : 100%;
+            font-size     : 14px;
+            color         : #090909;
+            letter-spacing: 0;
+            text-align    : left;
+            line-height   : 28px;
+            margin        : 0 auto 97px 0;
+        }
+
+        .miner-sub {
+            font-size     : 24px;
+            color         : #090909;
+            letter-spacing: 0;
+            line-height   : 23px;
+            margin-bottom : 25px;
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 767px) {
+    .miner-wrap .miner-content .miner-item {
+        width: 100%;
+    }
+
+    .miner-wrap .miner-content .miner-img {
+        width: 100% !important;
+    }
+
+    .miner-wrap .miner-banner .miner-sub {
+        width: 100%;
+    }
+
+    .miner-wrap .miner-content .miner-title {
+        font-size: 24px;
+    }
+
+    .miner-wrap .miner-content .miner-sub {
+        font-size: 20px;
+    }
+}

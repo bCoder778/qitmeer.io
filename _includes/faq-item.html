@@ -1,0 +1,14 @@
+<div class="panel">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a data-toggle="collapse" {% increment num  %} data-parent="#accordion" href="#collapse{{num}}">
+        {{post.title}}
+      </a>
+    </h4>
+  </div>
+  <div id="collapse{{num}}" +post.id class="panel-collapse collapse">
+    <div class="panel-body markdown-body">
+      {{post.content}}
+    </div>
+  </div>
+</div>

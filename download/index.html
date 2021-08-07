@@ -1,0 +1,106 @@
+---
+layout: default
+title: Download
+---
+
+<div class="download-wrap">
+    <div class="banner-common">
+        <canvas id="canvas"></canvas>
+        <div class="container banner-common-img">
+        </div>
+    </div>
+    <div class="download-content container">
+        <p class="downloadTitle">Soft Download</p>
+        <div class="download-content-wrap">
+            <div class="download-download">
+                <div class="download-wrap1">
+                    <div class="download">Qitmeer-Node</div>
+                    <div class="download-menu1 download-menu">
+                        <div class="download-menu-content">
+                            <a class="menu-download" target="_blank"
+                                href="https://github.com/Qitmeer/qitmeer/releases">Github</a>
+                            <a class="menu-download menuLocal1">Local</a>
+                        </div>
+                        <ul class="local-list localList1">
+                            <li><a href="/assets/soft/qitmeer/qitmeer-0.8.5-darwin-amd64.tar.gz">qitmeer-0.8.5-darwin-amd64.tar.gz</a>
+                            </li>
+                            <li><a href="/assets/soft/qitmeer/qitmeer-0.8.5-linux-amd64.tar.gz">qitmeer-0.8.5-linux-amd64.tar.gz</a>
+                            </li>
+                            <li><a href="/assets/soft/qitmeer/qitmeer-0.8.5-windows-amd64.cn.zip">qitmeer-0.8.5-windows-amd64.cn.zip</a>
+                            </li>
+                            <li><a href="/assets/soft/qitmeer/qitmeer-0.8.5-windows-amd64.zip">qitmeer-0.8.5-windows-amd64.zip</a></li>
+                            <li><a href="/assets/soft/qitmeer/qitmeer-0.8.5_checksum.txt">qitmeer-0.8.5_checksum.txt</a></li>
+                            <li><a href="/assets/soft/qitmeer/qitmeer-0.8.5.zip">Source code(zip)</a></li>
+                            <li><a href="/assets/soft/qitmeer/qitmeer-0.8.5.tar.gz">Source code(tar.gz)</a></li>
+                        </ul>
+                        <div class="close close1">Close</div>
+                    </div>
+                </div>
+
+                <div class="download-wrap2">
+                    <div class="download">Qitmeer-Miner </div>
+                    <div class="download-menu2 download-menu">
+                        <div class="download-menu-content">
+                            <a class="menu-download" target="_blank"
+                                href="https://github.com/Qitmeer/qitmeer-miner/releases">Github</a>
+                            <a class="menu-download menuLocal2">Local</a>
+                        </div>
+                        <ul class="local-list localList2">
+                            <!-- <li><a href="/assets/soft/miner/mac-miner.zip">mac-miner.zip</a><span>11MB</span></li> -->
+                            <li><a href="/assets/soft/miner/ubuntu-miner.zip">ubuntu-miner.zip</a></li>
+                            <li><a href="/assets/soft/miner/win-miner.zip">win-miner.zip</a></li>
+                            <li><a href="/assets/soft/miner/mac-miner.zip">mac-miner</a></li>
+                            <!-- <li><a href="/assets/soft/miner/qitmeer-miner-0.3.0.tar.gz">Source code(tar.gz)</a></li> -->
+                        </ul>
+                        <div class="close close2">Close</div>
+                    </div>
+                </div>
+                <a class="download" target="_blank" href="https://www.qitmeertalk.org/t/qitmeer-2019-11-14/906">Help Document</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('div.download-wrap1').click(function () {
+            $('.download-menu2').hide();
+            $(this).find('.download-menu1').show();
+        });
+        $('.close1').click(function (e) {
+            $('div.download-menu').hide();
+            e.stopPropagation();
+        })
+
+        $('.close2').click(function (e) {
+            $('div.download-menu').hide();
+            e.stopPropagation();
+        })
+
+        $('div.download-wrap2').click(function () {
+            $('.download-menu1').hide();
+            $(this).find('.download-menu2').show();
+        });
+
+        $('.baidu1').click(function () {
+            $('.baidu11').show();
+            $('.localList1').hide();
+        });
+        $('.baidu2').click(function () {
+            $('.localList2').hide();
+            $('.baidu22').show();
+        });
+
+        $('.menuLocal1').click(function () {
+            $('.baidu11').hide();
+            $('.localList1').show();
+        });
+        $('.menuLocal2').click(function () {
+            $('.baidu22').hide();
+            $('.localList2').show();
+        });
+
+
+    });
+
+</script>

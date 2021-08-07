@@ -1,0 +1,1576 @@
+// @import "../font-awesome/css/font-awesome.min.css";
+@import "../font-awesome/css/font-awesome.min.css";
+@import './animate.less';
+@import './news.less';
+@import "./faq.less";
+@import "./product.less";
+@import "./markdown.less";
+@import './about.less';
+@import './miner.less';
+@import './business.less';
+@import './download.less';
+
+
+.miner-table {
+    max-width    : 1000px;
+    border       : 1px solid #ebebeb;
+    font-size    : 14px;
+    border-right : none;
+    margin-bottom: 50px;
+
+    .miner-table-th {
+        .miner-table-row {
+            font-weight: 500;
+            color      : #000;
+            background : #fbfbfb;
+
+            .miner-table-cell {
+                padding: 13px 0;
+            }
+        }
+    }
+
+    .miner-table-body {
+        .miner-table-row {
+            // display: table;
+            // width  : 100%;
+
+
+            .miner-table-cell {
+                padding: 8px 0;
+            }
+        }
+
+        &>div:nth-child(even) {
+            background: #fbfbfb;
+        }
+    }
+
+    .miner-table-row {
+        display: table;
+        width  : 100%;
+
+        .miner-table-cell {
+            display     : table-cell;
+            width       : 20%;
+            text-align  : center;
+            border-right: 1px solid #ebebeb;
+            color       : #000;
+        }
+    }
+}
+
+.miner-table2 {
+    max-width: 800px;
+}
+
+// @bannerColor: #56BEAC;
+@mainColor     : #04C1AC;
+
+.trans {
+    -webkit-transition: all .5s ease-in-out;
+    transition        : all .5s ease-in-out;
+}
+
+* {
+    margin            : 0;
+    padding           : 0;
+    -webkit-box-sizing: border-box;
+    box-sizing        : border-box;
+}
+
+body {
+    font-size  : 16px;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Helvetica Neue, Roboto, Segoe UI, sans-serif;
+    color      : #999;
+    font-weight: 300;
+    line-height: 1.5;
+    // overflow: hidden;
+}
+
+p {
+    margin : 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover,
+a:visited,
+a:link {
+    text-decoration: none !important;
+}
+
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.5;
+}
+
+.container-inner {
+    max-width: 1200px;
+    margin   : 0 auto;
+}
+
+.header-wrap {
+    width          : 100%;
+    height         : 76px;
+    display        : flex;
+    justify-content: space-between;
+    align-items    : center;
+    position       : fixed;
+    top            : 0;
+    z-index        : 999;
+    background     : #fff;
+    border-bottom  : 1px solid #eee;
+
+    .header {
+        // display        : flex;
+        // align-items    : center;
+        // justify-content: space-between;
+    }
+
+    .logo {
+        display        : flex;
+        width          : 210px;
+        height         : 40px;
+        background     : url('/assets/images/logo.png') no-repeat;
+        background-size: contain;
+        align-items    : center;
+        color          : @mainColor;
+        font-size      : 25px;
+        letter-spacing : 0;
+        line-height    : 25px;
+        text-indent    : 60px;
+        position       : relative;
+
+        &::after {
+            content      : '';
+            position     : absolute;
+            right        : 0;
+            display      : block;
+            width        : 1px;
+            height       : 29px;
+            // background: #eee;
+            // margin    :0 40px 0 50px;
+        }
+    }
+
+    .menu-item {
+        padding-left: 28px;
+        font-size   : 18px;
+        display     : inline-block;
+    }
+
+    .menu-active {
+        color: @mainColor;
+    }
+
+    .menu-wrap {
+        margin-left: 40px;
+    }
+
+    a {
+        color: #000;
+    }
+}
+
+.banner-common {
+    background: @mainColor;
+    width     : 100%;
+    margin-top: 76px;
+    padding   : 90px 0;
+    position  : relative;
+    overflow  : hidden;
+
+    #canvas {
+        position : absolute;
+        top      : 0;
+        left     : 0;
+        // width : 100%;
+        // height: 100%;
+    }
+
+    .banner-common-img {
+        height         : 140px;
+        background     : url(/assets/images/blockchain.png) no-repeat 15px;
+        background-size: contain;
+    }
+}
+
+
+
+.header-wrap.animate {
+    opacity                    : 0;
+    animation                  : fadeNavIN 1s;
+    -webkit-animation          : fadeNavIN 1s;
+    animation-delay            : 0.1s;
+    -webkit-animation-delay    : 0.1s;
+    animation-fill-mode        : forwards;
+    -webkit-animation-fill-mode: forwards;
+}
+
+.alt {
+    background   : transparent;
+    border-bottom: none;
+    position     : absolute;
+
+    .logo {
+        color          : #fff;
+        background     : url('/assets/images/logo-white.png') no-repeat;
+        background-size: contain;
+    }
+
+    .menu-active {
+        color: #fff;
+    }
+
+    a {
+        color: #fff;
+    }
+}
+
+.section-left {
+    margin-top: 70px;
+}
+
+.mining-left {
+    margin-top: 90px;
+}
+
+.banner-wrap {
+    min-height: 100vh;
+    background: @mainColor;
+    color     : #FFFFFF;
+    position  : relative;
+
+    canvas {
+        position : absolute;
+        top      : 0;
+        left     : 0;
+        // width : 100%;
+        // height: 100vh;
+    }
+
+    .banner {
+        display        : flex;
+        justify-content: space-between;
+        align-items    : center;
+        min-height     : 100vh;
+        flex-wrap      : wrap;
+
+        .banner-left {
+            .banner-title {
+                font-size     : 32px;
+                letter-spacing: 0;
+                margin-bottom : 50px;
+                min-height    : 80px;
+
+                &::after {
+                    content   : '';
+                    display   : block;
+                    width     : 37px;
+                    height    : 3px;
+                    background: #fff;
+                    margin-top: 27px;
+                }
+            }
+
+            .blockchain-img {
+                width: 825px;
+            }
+        }
+
+        .banner-right {
+            width          : 220px;
+            height         : 240px;
+            border         : 1px solid #FFF;
+            border-radius  : 3px;
+            padding        : 50px 30px 8px;
+            margin-top     : 75px;
+            display        : flex;
+            flex-direction : column;
+            justify-content: space-between;
+            position       : relative;
+            z-index        : 10;
+
+            .whitepaper {
+                font-size     : 26px;
+                letter-spacing: 0;
+                text-align    : justify;
+                line-height   : 30px;
+            }
+
+            .language-wrap {
+                display        : flex;
+                flex-wrap      : wrap;
+                justify-content: space-between;
+
+                .language-item {
+                    display        : flex;
+                    justify-content: space-between;
+                    width          : 42%;
+                    margin-bottom  : 15px;
+                    color          : #F2F9FD;
+                    align-items    : center;
+
+                    .language-narrow {
+                        margin-left: 6px;
+                        transition : transform 0.2s ease 0s;
+                    }
+
+                    &:hover {
+                        span {
+                            color: #fff;
+                        }
+
+                        .language-narrow {
+                            -webkit-transform: translate(4px);
+                            transform        : translate(4px);
+                            color            : #fff;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.notice-wrap {
+    width        : 100%;
+    // background: #2A55D7;
+    background   : #43988A;
+
+    .news-name-item {
+        position         : relative;
+        animation        : moveUp 8s .3s infinite;
+        -webkit-animation: moveUp 8s .3s infinite;
+        display          : block;
+        color            : #fff;
+    }
+
+    .notice {
+        height         : 48px;
+        display        : flex;
+        align-items    : center;
+        justify-content: space-between;
+        color          : #fff;
+
+        .notice-left {
+            display    : flex;
+            align-items: center;
+
+            .notice-icon {
+                font-size: 24px;
+            }
+
+            .notice-title {
+                color      : #F7F7F7;
+                margin-left: 20px;
+            }
+
+            .news-names {
+                height     : 48px;
+                line-height: 48px;
+                margin-left: 20px;
+                overflow   : hidden;
+            }
+        }
+
+        .notice-more {
+            width          : 193px;
+            height         : 100%;
+            display        : flex;
+            align-items    : center;
+            justify-content: center;
+            color          : #FFF;
+            .trans;
+
+            .notice-narrow {
+                margin-left: 10px;
+                font-size  : 20px;
+            }
+
+            &:hover {
+                // background  : #2141a5;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.section-title {
+    font-size     : 36px;
+    color         : #0D1F27;
+    font-weight   : 500;
+    letter-spacing: 0;
+
+    &::after {
+        content   : '';
+        display   : block;
+        width     : 80px;
+        height    : 2px;
+        background: @mainColor;
+        margin-top: 20px;
+    }
+}
+
+.section-wrap {
+    // display        : flex;
+    justify-content   : space-between;
+    align-items       : center;
+    padding-top       : 10px;
+    position          : relative;
+    flex-wrap         : wrap;
+    // height         : 700px;
+
+    .qitmeer-right {
+        display        : flex;
+        justify-content: flex-end;
+    }
+
+    .qitmeer-bg {
+        position: absolute;
+        top     : 60px;
+        right   : -210px;
+    }
+
+    .qitmeer-img {
+        position: relative;
+        z-index : 10;
+        // width: 100%;
+    }
+
+    .qitmeer-wrap {
+        margin-top: 20px;
+
+        .qitmeer-item {
+            margin-bottom: 10px;
+        }
+    }
+
+}
+
+.social-wrap {
+    display   : flex;
+    margin-top: 30px;
+    flex-wrap : wrap;
+
+    .social-item {
+        display        : flex;
+        flex-direction : column;
+        align-items    : center;
+        justify-content: center;
+        margin         : 0 38px 30px 0;
+        width          : 100px;
+
+        .social-item-logo {
+            width          : 38px;
+            height         : 38px;
+            display        : flex;
+            align-items    : center;
+            justify-content: center;
+            border-radius  : 50%;
+            border         : 1px solid @mainColor;
+            .trans;
+
+            .social-logo-img {
+                width: 19px;
+            }
+
+            &:hover {
+                background: @mainColor;
+
+                .social-icon {
+                    color: #fff;
+                }
+            }
+
+        }
+
+        .social-icon {
+            font-size: 20px;
+            color    : @mainColor;
+            .trans;
+        }
+
+        .social-name {
+            font-size : 14px;
+            margin-top: 10px;
+        }
+    }
+
+}
+
+.section-center-title {
+    display       : flex;
+    flex-direction: column;
+    align-items   : center;
+}
+
+.technology-wrap {
+    width     : 100%;
+    padding   : 48px 0;
+    background: url('/assets/images/bg-icon.png') repeat;
+    text-align: center;
+
+    .technology-content {
+        margin-top: 63px;
+
+        .technology-item {
+            text-align   : center;
+            margin-bottom: 60px;
+            min-height   : 200px;
+
+            .technology-title {
+                color      : #333333;
+                margin     : 15px 0;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+.mining-wrap {
+    padding: 90px 0;
+
+
+
+    .mining-img {
+        width: 500px;
+    }
+}
+
+.mining-more {
+    width          : 189px;
+    height         : 49px;
+    display        : flex;
+    align-items    : center;
+    justify-content: center;
+    border         : 1px solid @mainColor;
+    color          : @mainColor;
+    margin-top     : 40px;
+    position       : relative;
+    transition     : background .6s ease-in-out;
+
+    .mining-more-icon {
+        transition : all .5s ease-in-out;
+        opacity    : 0;
+        margin-left: 0;
+        font-size  : 20px;
+
+    }
+
+    &:hover {
+        background: @mainColor;
+        color     : #fff;
+
+        .mining-more-icon {
+            opacity    : 1;
+            margin-left: 15px;
+        }
+    }
+}
+
+.roadmap-wrap {
+    padding-bottom: 100px;
+
+    .roadmap {
+        height    : 265px;
+        position  : relative;
+        margin-top: 90px;
+
+        &::after {
+            content   : '';
+            display   : block;
+            width     : 100%;
+            height    : 1px;
+            background: #D0CDCD;
+            position  : absolute;
+            top       : 50%;
+            z-index   : -1;
+        }
+
+        .roadmap-container {
+            height: 100%;
+
+            .roadmap-top {
+                display: flex;
+                height : 50%;
+
+                .roadmap-line {
+                    &::after {
+                        bottom: -8px;
+                        left  : -8px;
+                    }
+                }
+            }
+
+            .roadmap-line {
+                &::after {
+                    content      : '';
+                    display      : block;
+                    border-radius: 50%;
+                    width        : 14px;
+                    height       : 14px;
+                    border       : 1px solid #979797;
+                    position     : absolute;
+                    background   : #fff;
+                    z-index      : 10;
+                }
+            }
+
+            .roadmap-intro {
+                height     : 100%;
+                margin-left: 12px;
+                width      : 160px;
+
+            }
+        }
+
+        .roadmap-item {
+            height     : 100%;
+            display    : flex;
+            position   : relative;
+            align-items: flex-end;
+        }
+
+        .roadmap-line {
+            width   : 66px;
+            height  : 71px;
+            position: relative;
+            background: linear-gradient(to bottom right,
+                    rgba(0, 0, 0, 0) 0%,
+                    rgba(0, 0, 0, 0) calc(50% - 1px),
+                    rgba(151, 151, 151, 1) 50%,
+                    rgba(0, 0, 0, 0) calc(50% + 1px),
+                    rgba(0, 0, 0, 0) 100%);
+        }
+
+        .roadmap-title {
+            font-size     : 18px;
+            color         : #1A1A1B;
+            letter-spacing: 0;
+            line-height   : 18px;
+            font-weight   : 400;
+        }
+
+        .roadmap-detail {
+            line-height: 18px;
+            margin-top : 7px;
+        }
+
+        .roadmap-bottom {
+            display: flex;
+
+            .roadmap-line {
+                &::after {
+                    top  : -8px;
+                    right: -8px;
+                }
+
+            }
+
+            .roadmap-item {
+                display    : block;
+                margin-left: 80px;
+            }
+        }
+
+    }
+}
+
+.roadmap-mobile {
+    margin: 70px 15px 0 25px;
+
+    .roadmap-mobile-item {
+        display: flex;
+
+        .roadmap-item-line-wrap {
+            display        : flex;
+            justify-content: center;
+            flex-direction : column;
+            align-items    : center;
+
+            .roadmap-item-line {
+                flex      : 1;
+                width     : 1px;
+                background: @mainColor;
+            }
+
+            .roadmap-item-dot {
+                width          : 18px;
+                height         : 18px;
+                background     : white;
+                border         : 1px solid @mainColor;
+                border-radius  : 100%;
+                display        : flex;
+                justify-content: center;
+                align-items    : center;
+                position       : relative;
+            }
+        }
+
+        .roadmap-mobile-item-content {
+            padding   : 0 0 40px 15px;
+            margin-top: -2px;
+
+            .roadmap-mobile-item-time {
+                color      : #000;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+
+.section-right-title {
+    display       : flex;
+    flex-direction: column;
+    align-items   : flex-end;
+
+}
+
+.wallet-wrap {
+    background: url(/assets/images/bg-icon.png) repeat;
+    padding   : 90px 0;
+
+    .wallet-img {
+        position: relative;
+        top     : -40px;
+    }
+
+    .wallet-right {
+        text-align: right;
+        margin-top: 80px;
+
+        .wallet-content {
+            color         : #0D270D;
+            letter-spacing: 0;
+            line-height   : 38px;
+            margin        : 30px 0 35px;
+        }
+
+        .wallet-download {
+            display        : flex;
+            justify-content: flex-end;
+
+            .wallet-btn {
+                width          : 226px;
+                height         : 68px;
+                background     : #FFFFFF;
+                border         : 1px solid rgba(229, 229, 229, 0.8);
+                border-radius  : 34px;
+                display        : flex;
+                align-items    : center;
+                justify-content: center;
+                cursor         : pointer;
+                .trans;
+
+                .wallet-phone {
+                    color      : #0D270D;
+                    font-size  : 20px;
+                    margin-left: 25px;
+                }
+
+                .wallet-icon {
+                    font-size: 36px;
+                    color    : rgb(236, 238, 241);
+                }
+
+                &:hover {
+                    background: #fbfbfb;
+                }
+            }
+
+            &>:nth-child(2) {
+                margin-left: 40px;
+            }
+        }
+    }
+}
+
+.commercial-wrap {
+    padding: 90px 0;
+}
+
+.commercial {
+
+    .commercial-item {
+        background: #FFFFFF;
+        margin-top: 48px;
+        box-shadow: 0 2px 16px 6px rgba(233, 233, 233, 0.50);
+        overflow  : hidden;
+        .trans;
+
+        .item-img-wrap {
+            height         : 215px;
+            overflow       : hidden;
+            display        : flex;
+            align-items    : center;
+            justify-content: center;
+            opacity        : 0.8;
+            .trans;
+        }
+
+        &:hover {
+            -webkit-transform: translateY(-8px);
+            transform        : translateY(-8px);
+
+            .item-img-wrap {
+                opacity: 1;
+            }
+        }
+
+
+
+        img {
+            width: 100%;
+        }
+
+        .commercial-sub {
+            overflow          : hidden;
+            text-overflow     : ellipsis;
+            display           : -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+        }
+
+        .commercial-item-content {
+            padding : 12px 15px 0;
+            position: relative;
+
+            &::after {
+                position    : absolute;
+                content     : '';
+                top         : -24px;
+                left        : 0;
+                width       : 0;
+                height      : 0;
+                border-style: solid;
+                border-width: 2em 0 0 30em;
+                z-index     : 0;
+                border-color: transparent transparent transparent #fefefe;
+            }
+
+            .commercial-title {
+                font-size     : 18px;
+                color         : #2C2C2C;
+                letter-spacing: 0;
+                line-height   : 18px;
+            }
+
+            .commercial-sub {
+                font-size     : 14px;
+                color         : #9A9A9A;
+                letter-spacing: 0;
+                padding-top   : 16px;
+
+            }
+
+            .commercial-more {
+                width          : 100%;
+                margin-top     : 20px;
+                border-top     : 1px solid #E7E6E6;
+                display        : flex;
+                align-items    : center;
+                justify-content: flex-end;
+                padding        : 18px 0;
+
+                .commercial-more-icon {
+                    margin-left: 12px;
+                }
+            }
+        }
+    }
+}
+
+.team-wrap {
+    padding: 40px 0 90px;
+
+    .team {
+        margin-top: 60px;
+    }
+
+    .team-item-wrap {
+        display: flex;
+
+        .team-item {
+            display       : flex;
+            flex-direction: column;
+            align-items   : center;
+            background    : #fff;
+
+        }
+
+        .team-item-img {
+            width          : 160px;
+            height         : 160px;
+            display        : flex;
+            align-items    : center;
+            justify-content: center;
+            border-radius  : 50%;
+
+        }
+
+        .team-item-img1 {
+            background     : url('/assets/images/team1.png') center;
+            background-size: cover;
+        }
+
+        .team-item-img2 {
+            background     : url('/assets/images/team2.png') center;
+            background-size: cover;
+        }
+
+        .team-item-img3 {
+            background     : url('/assets/images/team3.png') center;
+            background-size: cover;
+        }
+
+        .team-item-img4 {
+            background     : url('/assets/images/team4.png') center;
+            background-size: cover;
+        }
+
+        .team-item-img5 {
+            background     : url('/assets/images/team5.png') center;
+            background-size: cover;
+        }
+
+        .team-item-img6 {
+            background     : url('/assets/images/team6.png') center;
+            background-size: cover;
+        }
+
+        .team-item-img7 {
+            background     : url('/assets/images/team7.png') center;
+            background-size: cover;
+        }
+
+        .team-item-img8 {
+            background     : url('/assets/images/team8.png') center;
+            background-size: cover;
+        }
+
+        .team-item-img9 {
+            background     : url('/assets/images/team9.png') center;
+            background-size: cover;
+        }
+
+        .team-item-img10 {
+            background     : url('/assets/images/team10.png') center;
+            background-size: cover;
+        }
+
+        .team-item-img11 {
+            background     : url('/assets/images/team11.png') center;
+            background-size: cover;
+        }
+
+        .team-user {
+            width         : 100%;
+            border-bottom : 1px solid rgb(188, 188, 188, .8);
+            padding-bottom: 15px;
+            margin-bottom : 10px;
+
+            .team-name {
+                font-size     : 18px;
+                color         : @mainColor;
+                letter-spacing: 0;
+                line-height   : 19px;
+                margin        : 25px 0 5px;
+            }
+        }
+
+        .team-intro {
+            font-size     : 12px;
+            color         : #9A9A9A;
+            letter-spacing: 0;
+        }
+    }
+}
+
+.carousel-control {
+    width: auto !important;
+}
+
+.footer-wrap {
+    background: #027d6f;
+    padding   : 50px 0 80px;
+    color     : rgba(255, 255, 255, .8);
+
+    .link-wrap {
+        display        : flex;
+        justify-content: flex-end;
+        flex-wrap      : wrap;
+        margin-top     : 20px;
+
+        span {
+            font-size   : 18px;
+            color       : #fff;
+            font-weight : 500;
+            line-height : 35px;
+            margin-right: 15px;
+        }
+
+        a {
+            color        : #fff;
+            font-size    : 14px;
+            line-height  : 35px;
+            margin-left  : 15px;
+            display      : flex;
+            align-items  : center;
+            margin-bottom: 10px;
+        }
+
+        a:after {
+            content    : '';
+            height     : 16px;
+            width      : 1px;
+            background : #999;
+            margin-left: 10px;
+        }
+    }
+
+    .footer {
+        display        : flex;
+        justify-content: space-between;
+
+        .footer-qitmeer {
+            width: 460px;
+        }
+    }
+
+    .footer-menu-wrap {
+        display        : flex;
+        flex           : 1;
+        justify-content: flex-end;
+        padding-top    : 20px;
+        width          : 600px;
+    }
+
+    a {
+        color: rgba(255, 255, 255, .8);
+    }
+
+    .footer-qitmeer-logo {
+        display        : flex;
+        width          : 100%;
+        height         : 40px;
+        background     : url('/assets/images/logo.png') no-repeat;
+        background-size: contain;
+        align-items    : center;
+        font-size      : 28px;
+        color          : @mainColor;
+        letter-spacing : 0;
+        line-height    : 30px;
+        text-indent    : 60px;
+    }
+
+    .footer-infor {
+        margin: 40px 0 30px;
+        width : 350px;
+
+    }
+
+    .footer-social {
+        // width    : 90%;
+        flex-wrap   : wrap;
+
+        .social-item {
+            margin: 0 65px 30px 0;
+            width : auto;
+        }
+    }
+
+    .footer-menu {
+        display       : flex;
+        flex-direction: column;
+        width         : 22%;
+        text-align    : right;
+    }
+
+    .footer-menu-title {
+        color        : @mainColor;
+        line-height  : 30px;
+        font-weight  : 500px;
+        margin-bottom: 40px;
+    }
+
+    .footer-menu-sub {
+        margin-bottom: 20px;
+    }
+}
+
+.wechat-modal {
+    .wechat-img {
+        width: 100%;
+    }
+
+    .wechat-text {
+        text-align: center;
+        margin-top: 10px;
+    }
+}
+
+.qitmeer-wrap {
+    width   : 100%;
+    overflow: hidden;
+}
+
+#myCarousel span {
+    color: @mainColor;
+}
+
+.carousel-control {
+    text-shadow: 0 1px 2px #ccc;
+}
+
+.dropdown-menu {
+    border-top: 2px solid #01c1ac;
+    margin-top: 8px;
+}
+
+.dropdown-menu>li>a {
+    padding    : 10px 20px;
+    color      : #000;
+    font-size  : 18px;
+    font-weight: 300;
+}
+
+.nav .open>a,
+.nav .open>a:focus,
+.nav .open>a:hover {
+    background: none;
+}
+
+.left-nav {
+    float      : right;
+    line-height: 40px;
+}
+
+.carousel-inner>.item {
+    height: 380px;
+}
+
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+    background: @mainColor;
+    border    : none;
+}
+
+@media screen and (min-width: 916px) and (max-width: 1200px) {
+    .container {
+        max-width: 100%;
+        width    : 100%;
+    }
+
+    .app-wrap {
+        width   : 100%;
+        overflow: hidden;
+    }
+
+    .roadmap-wrap .roadmap .roadmap-container {
+        max-width : 1200px;
+        overflow-x: scroll;
+    }
+
+    .banner-left {
+        margin-top: 100px;
+    }
+
+    .banner-wrap .banner .banner-right {
+        margin-top: 0;
+    }
+
+    .section-wrap .qitmeer-right {
+        justify-content: center;
+    }
+
+    .mining-right,
+    .wallet-left {
+        display        : flex;
+        justify-content: center;
+    }
+
+    .banner-common {
+        padding : 50px;
+        position: relative;
+
+        #canvas {
+            position: absolute;
+            top     : 0;
+            left    : 0;
+        }
+
+        .banner-common-img {
+            width          : 100%;
+            height         : 253px;
+            background     : url('/assets/images/blockchain.png') no-repeat center;
+            background-size: contain;
+
+        }
+    }
+}
+
+.investors-item {
+    display        : flex;
+    flex-direction : row;
+    flex-wrap      : wrap;
+    justify-content: space-between;
+}
+
+.investors-item-wrap {
+    justify-content: center;
+    display        : flex;
+    align-items    : center;
+    flex-direction : column;
+    width          : 200px;
+}
+
+.investors-item-img-wrap {
+    width      : 100px;
+    height     : 100px;
+    overflow   : hidden;
+    display    : flex;
+    align-items: center;
+}
+
+.investors-logo {
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) and (max-width:915px) {
+    body {
+        min-width : 1200px;
+        overflow-x: scroll;
+    }
+
+    .app-wrap {
+        width   : 100%;
+        overflow: hidden;
+    }
+
+    // .hidden-xs{
+    //     display: none;
+    // }
+    .container {
+        width: 1170px;
+    }
+
+    .header-wrap {
+        width: 1200px;
+    }
+
+    .roadmap-wrap .roadmap .roadmap-container {
+        max-width : 100%;
+        overflow-x: scroll;
+    }
+
+    .section-wrap .qitmeer-img {
+        display: none;
+    }
+
+    .investors-item-wrap {
+        width: 150px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .app-wrap {
+        width   : 100%;
+        overflow: hidden;
+    }
+
+    .dropdown-menu {
+        position  : relative;
+        float     : none;
+        box-shadow: none;
+        border    : none;
+    }
+
+    .left-nav {
+        float      : none;
+        line-height: 25px;
+    }
+
+    .navbar-collapse {
+        box-shadow: 0px 7px 7px -7px rgba(212, 212, 212, 0.5);
+        background: #fff;
+
+        a {
+            color: #02030b;
+        }
+    }
+
+    .alt .menu-active {
+        color: @mainColor;
+    }
+
+
+
+    .mining-wrap .mining-img,
+    .section-left,
+    .wallet-right {
+        width: 100%;
+    }
+
+    .team-wrap .team-item-wrap .team-item-img {
+        width : 150px;
+        height: 150px;
+    }
+
+    .carousel-control {
+        width           : 15% !important;
+        background-image: none !important;
+    }
+
+    .banner-wrap .banner .banner-left {
+        width     : 100%;
+        min-height: 210px;
+
+        .banner-title {
+            width    : 100%;
+            font-size: 20px;
+            margin   : 60px 0;
+        }
+    }
+
+    .banner-wrap .banner .banner-right {
+        margin-top: 0;
+        position  : relative;
+        top       : -80px;
+        width     : 215px;
+        height    : 220px;
+        padding   : 20px 20px 8px;
+    }
+
+    .section-title {
+        font-size: 26px;
+    }
+
+    .section-left {
+        margin-top: 40px;
+    }
+
+
+    .notice-wrap .notice .notice-more {
+        width: 80px;
+    }
+
+    .notice-wrap .notice .notice-left {
+        flex: 1;
+    }
+
+    .social-wrap {
+        margin-bottom: 15px;
+
+        .social-item {
+            width       : 33%;
+            margin-right: 0;
+
+        }
+    }
+
+    .mining-left {
+        margin: 40px 0;
+    }
+
+    .mining-wrap .mining-more {
+        width : 160px;
+        height: 40px;
+        float : right;
+    }
+
+    .wallet-wrap {
+        .wallet-right {
+            .wallet-download {
+                .wallet-btn {
+                    height: 50px;
+
+                    .wallet-icon {
+                        font-size: 26px;
+                    }
+
+                    .wallet-phone {
+                        font-size  : 16px;
+                        margin-left: 14px;
+                    }
+                }
+            }
+        }
+
+        .wallet-left {
+            width : 90%;
+            margin: 0 auto;
+        }
+
+        .wallet-img {
+            width     : 100%;
+            margin-top: -80px;
+        }
+    }
+
+    .footer-wrap {
+        .footer {
+            display: block;
+
+            .footer-qitmeer {
+                // width: 100%;
+            }
+        }
+
+        .footer-menu-wrap {
+            justify-content: flex-start;
+        }
+
+        .footer-social {
+            width        : 100%;
+            margin-bottom: 20px;
+
+            .social-item {
+                width       : 40px;
+                margin-right: 12px;
+                margin-top  : 0 !important;
+            }
+        }
+    }
+
+    .header-wrap .logo {
+        height     : 36px;
+        font-size  : 20px;
+        text-indent: 52px;
+
+        &::after {
+            display: none;
+        }
+    }
+
+    .navbar-toggle .icon-bar {
+        background: #000;
+    }
+
+    .home .navbar-toggle .icon-bar {
+        background: #fff;
+    }
+
+    .navbar-toggle {
+        margin  : 0;
+        padding : 0;
+        position: absolute;
+        right   : 15px;
+    }
+
+    .navbar-header {
+        display     : flex;
+        align-items : center;
+        width       : 100%;
+        padding     : 0;
+        margin-right: 0 !important;
+        margin-left : 0 !important;
+        position    : relative;
+        box-sizing  : border-box;
+        padding     : 0 15px;
+    }
+
+    .section-wrap .qitmeer-img {
+        width: 100%;
+    }
+
+    .navbar-header,
+    .header-wrap {
+        height : 66px;
+        padding: 0;
+    }
+
+    .header-wrap {
+        display: block;
+
+        .header {
+            display: block;
+        }
+    }
+
+
+
+    .header-wrap .menu-item {
+        display: block;
+        padding: 12px 0;
+    }
+
+
+    .mobile .navbar-toggle .icon-bar {
+        background: #000;
+    }
+
+    .banner-common {
+        margin-top: 66px;
+        padding   : 50px;
+        position  : relative;
+
+        #canvas {
+            position: absolute;
+            top     : 0;
+            left    : 0;
+        }
+
+        .banner-common-img {
+            width          : 100%;
+            height         : 253px;
+            background     : url('/assets/images/blockchain.png') no-repeat center;
+            background-size: contain;
+
+        }
+    }
+
+    .footer-wrap {
+        .footer-menu {
+            text-align  : left;
+            width       : auto;
+            margin-right: 40px;
+        }
+
+        .footer .footer-qitmeer {
+            width: auto;
+        }
+
+        .footer-infor {
+            width: 100%;
+        }
+    }
+
+    .technology-wrap {
+        .technology-content {
+            &>div:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .roadmap-wrap {
+        padding-bottom: 80px;
+    }
+
+    .investors-item-wrap {
+        width: 150px;
+    }
+
+}

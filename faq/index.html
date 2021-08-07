@@ -1,0 +1,9 @@
+---
+layout: faq
+title: About
+permalink: /faq/
+---
+
+{% for post in paginator.posts %}
+{% include faq-item.html %}
+{% endfor %}

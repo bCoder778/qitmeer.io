@@ -1,0 +1,12 @@
+<div class="list_item">
+    <article class="business_item">
+        {% if post.thumbnail %}
+        <div class="business_item_left"><img class="business_item_img" src="{{ post.thumbnail }}" /></div>
+        {% endif %}
+        <div class="business_item_right">
+            <p class="title">{{ post.title }}</p>            
+            <p class=" des">{{post.content | strip_html | strip_newlines | truncate: 150 }}</p>
+            <a class="read-more" href="{{ post.url }}">READ MORE <i class="fa fa-angle-right"></i></a>
+        </div>
+    </article>
+</div>

@@ -1,0 +1,193 @@
+---
+layout: default
+title: Miner
+---
+
+<div class="miner-wrap">
+    <div class="banner-common">
+        <canvas id="canvas"></canvas>
+        <div class="container banner-common-img">
+        </div>
+    </div>
+    <div class="miner-content container">
+        <div class="miner-title">Why choose cuckoo cycle pow?</div>
+        <div class="miner-content-wrap">
+            <div class="miner-item">
+                Proof-of-Work(PoW) is used to confirm transactions and produces new blocks, therefore it is a very
+                important
+                engine in PoW cryptocurrencies. PoW must not enable a participant to have a significant advantage over
+                another participant. That is why Satoshi said: "Proof-of-work is essentially one-CPU-one-vote." However,
+                most widely used proof-of-work algorithms, such as SHA-256, Blake2b, Scrypt, are more efficient on ASIC
+                devices when compared to CPUs and GPUs. This can lead to ASIC owners posses a much larger voting power
+                than
+                CPU and GPU owners.
+                It violates the “one-CPU-one-vote” principle.
+                Cuckoo-Cycle-PoW ,a graph-theoretic proof-of-work algorithm. It is ASIC resistant. This algorithm
+                focuses
+                more on memory use, meaning the solution time is bound to memory bandwidth rather than the raw processor
+                or
+                GPU speed.
+                The Cuckoo-Cycle algorithm is designed to find certain subgraphs in large pseudo-random graphs. In
+                particular, Search for cycles of specified length L in a bipartite graph with M edges of N nodes. If a
+                cycle
+                is found and the hash difficulty is less than the target difficulty, the cuckoo cycle PoW is completed.
+            </div>
+            
+        </div>
+        <div class="miner-title">Mining device report
+        </div>
+        <div class="miner-sub">1.Speed test</div>
+
+        <div class="miner-table">
+            <div class="miner-table-th">
+                <div class="miner-table-row">
+                    <div class="miner-table-cell table-first">Name</div>
+                    <div class="miner-table-cell table-second">Cuckoo(24)(G/s)</div>
+                    <div class="miner-table-cell table-third">Double Blake2b(G/s)</div>
+                    <div class="miner-table-cell table-third">Power</div>
+                    <div class="miner-table-cell table-third">Price(¥)</div>
+                </div>
+            </div>
+            <div class="miner-table-body">
+                <div class="miner-table-row">
+                    <div class="miner-table-cell table-first">NVIDIA GeForce 1060</div>
+                    <div class="miner-table-cell table-second">4.4</div>
+                    <div class="miner-table-cell table-third">76</div>
+                    <div class="miner-table-cell table-third">120W</div>
+                    <div class="miner-table-cell table-third">2699</div>
+                </div>
+                <div class="miner-table-row">
+                    <div class="miner-table-cell table-first">NVIDIA GeForce 1070</div>
+                    <div class="miner-table-cell table-second">4.9</div>
+                    <div class="miner-table-cell table-third">103</div>
+                    <div class="miner-table-cell table-third">150W</div>
+                    <div class="miner-table-cell table-third">3099</div>
+                </div>
+                <div class="miner-table-row">
+                    <div class="miner-table-cell table-first">NVIDIA GeForce 1070 Ti</div>
+                    <div class="miner-table-cell table-second">5.3</div>
+                    <div class="miner-table-cell table-third">123</div>
+                    <div class="miner-table-cell table-third">180W</div>
+                    <div class="miner-table-cell table-third">3499</div>
+                </div>
+                <div class="miner-table-row">
+                    <div class="miner-table-cell table-first">AMD 580</div>
+                    <div class="miner-table-cell table-second">2.7</div>
+                    <div class="miner-table-cell table-third">40</div>
+                    <div class="miner-table-cell table-third">185W</div>
+                    <div class="miner-table-cell table-third">1899</div>
+                </div>
+                <div class="miner-table-row">
+                    <div class="miner-table-cell table-first">AMD 590</div>
+                    <div class="miner-table-cell table-second">3</div>
+                    <div class="miner-table-cell table-third">54</div>
+                    <div class="miner-table-cell table-third">225W</div>
+                    <div class="miner-table-cell table-third">1999</div>
+                </div>
+                <div class="miner-table-row">
+                    <div class="miner-table-cell table-first">HD Graphics 620</div>
+                    <div class="miner-table-cell table-second">0</div>
+                    <div class="miner-table-cell table-third">3</div>
+                    <div class="miner-table-cell table-third"></div>
+                    <div class="miner-table-cell table-third"></div>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="miner-sub">Double blake2b testnet</div>
+        <div class="miner-detail">1. generate a block every 2min</div>
+        <div class="miner-detail">2. 860 blocks one day</div>
+        <div class="miner-detail">3. one month 25000 blocks</div>
+        <div class="miner-sub" style="margin-top: 65px;">2.Mining Device mining 30 min test</div>
+
+        <div class="miner-table miner-table2">
+            <div class="miner-table-th">
+                <div class="miner-table-row">
+                    <div class="miner-table-cell table-first">Name</div>
+                    <div class="miner-table-cell table-second">Blocks of 30min</div>
+                    <div class="miner-table-cell table-third">One day</div>
+                </div>
+            </div>
+            <div class="miner-table-body">
+                <div class="miner-table-row">
+                    <div class="miner-table-cell table-first">NVIDIA GeForce 1060</div>
+                    <div class="miner-table-cell table-second">45</div>
+                    <div class="miner-table-cell table-third">45*48</div>
+
+                </div>
+                <div class="miner-table-row">
+                    <div class="miner-table-cell table-first">NVIDIA GeForce 1070</div>
+                    <div class="miner-table-cell table-second">56</div>
+                    <div class="miner-table-cell table-third">56*48</div>
+
+                </div>
+                <div class="miner-table-row">
+                    <div class="miner-table-cell table-first">NVIDIA GeForce 1070 Ti</div>
+                    <div class="miner-table-cell table-second">60</div>
+                    <div class="miner-table-cell table-third">60*48</div>
+
+                </div>
+                <div class="miner-table-row">
+                    <div class="miner-table-cell table-first">AMD 580</div>
+                    <div class="miner-table-cell table-second">30</div>
+                    <div class="miner-table-cell table-third">30*48</div>
+
+                </div>
+                <div class="miner-table-row">
+                    <div class="miner-table-cell table-first">AMD 590</div>
+                    <div class="miner-table-cell table-second">50</div>
+                    <div class="miner-table-cell table-third">50*48</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="miner-sub">cuckoo privnet</div>
+        <div class="miner-detail">1. 860 blocks one day</div>
+        <div class="miner-detail">2. one month 25000 blocks</div>
+    </div>
+</div>
+<script>
+    $(document).ready(function () {
+        $('div.download-wrap1').click(function () {
+            $('.download-menu2').hide();
+            $(this).find('.download-menu1').show();
+        });
+        $('.close1').click(function (e) {
+            $('div.download-menu').hide();
+            e.stopPropagation();
+        })
+
+        $('.close2').click(function (e) {
+            $('div.download-menu').hide();
+            e.stopPropagation();
+        })
+
+        $('div.download-wrap2').click(function () {
+            $('.download-menu1').hide();
+            $(this).find('.download-menu2').show();
+        });
+
+        $('.baidu1').click(function () {
+            $('.baidu11').show();
+            $('.localList1').hide();
+        });
+        $('.baidu2').click(function () {
+            $('.localList2').hide();
+            $('.baidu22').show();
+        });
+
+        $('.menuLocal1').click(function () {
+            $('.baidu11').hide();
+            $('.localList1').show();
+        });
+        $('.menuLocal2').click(function () {
+            $('.baidu22').hide();
+            $('.localList2').show();
+        });
+
+
+    });
+
+</script>

@@ -1,0 +1,8 @@
+---
+layout: news
+title: News
+---
+
+{% for post in paginator.posts %}
+{% include news-single.html %}
+{% endfor %}

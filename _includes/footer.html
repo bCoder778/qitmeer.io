@@ -1,0 +1,99 @@
+<footer class="footer-wrap">
+  <div class="container">
+    <div class="footer">
+      <div class="footer-qitmeer">
+        <a href="/" class="footer-qitmeer-logo">
+          QITMEER
+        </a>
+        <div class="footer-infor">Cutting Edge BlockDAG Based Next Generation Public Chain</div>
+        <div class="social-wrap footer-social">
+          <div class="social-item">
+            <a class="social-item-logo" href="{{ site.menuLink.Community.link }}">
+              <img src="/assets/images/logo.png" class="social-logo-img" />
+            </a>
+          </div>
+          {% for item in site.social %}
+          <div class="social-item">
+            <a class="social-item-logo" target="_blank" href="{{item.link}}">
+              <i class="fa fa-{{item.icon}} social-icon"></i>
+            </a>
+          </div>
+          {% endfor %}
+          <div class="social-item">
+            <a class="social-item-logo" style="cursor: pointer" data-toggle="modal" data-target="#wechat">
+              <i class="fa fa-wechat social-icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-menu-right-wrap">
+        <div class="footer-menu-wrap">
+          <div class="footer-menu hidden-xs">
+            <a href='{{ site.menuLink.Business.link }}' class="footer-menu-sub">Business</a>
+            <a href='{{ site.menuLink.Download.link }}' class="footer-menu-sub">Download</a>
+          </div>
+          <div class="footer-menu ">
+            <!-- <a href='{{ site.menuLink.Product.link }}' class="footer-menu-sub">Product</a> -->
+            <a href='{{ site.menuLink.Wallet.link }}' target="_blank" class="footer-menu-sub">Wallet</a>
+            <a href='{{ site.menuLink.Explorer.link }}' class="footer-menu-sub">Explorer</a>
+            <a href='{{ site.menuLink.Pool.link }}' class="footer-menu-sub">Pool</a>
+          </div>
+          <div class="footer-menu ">
+            <a href='{{ site.menuLink.Community.link }}' target="_blank" class="footer-menu-sub">Community</a>
+            <a href='{{ site.menuLink.Miner.link }}' class="footer-menu-sub">Miner</a>
+            <a href='{{ site.menuLink.Document.link }}' target="_blank" class="footer-menu-sub">Document</a>
+          </div>
+
+          <div class="footer-menu ">
+            <a href='{{ site.menuLink.About.link }}' class="footer-menu-sub">About</a>
+            <a href='{{ site.menuLink.News.link }}' class="footer-menu-sub">News</a>
+            <a href='{{ site.menuLink.FAQ.link }}' class="footer-menu-sub">FAQ</a>
+          </div>
+
+        </div>
+        <div class="link-wrap">
+          <span>Link :</span>
+          <a target="_blank" href="https://www.mytokencap.com/concept">My Token</a>
+          <a target="_blank" href="https://coinmarketcap.com/">CoinMarketcap</a>
+          <a target="_blank" href="https://www.8btc.com/">Chiannode</a>
+          <a target="_blank" href="https://www.666pool.cn/">666Pool</a>
+        </div>
+      </div>
+
+
+      <!-- <div class="footer-menu ">
+        <a href='###' class="footer-menu-title">Language</a>
+        <a href='###' class="footer-menu-sub">English</a>
+        <a href='###' class="footer-menu-sub">中文</a>
+      </div> -->
+    </div>
+  </div>
+</footer>
+<section class="modal fade wechat-modal" id="wechat">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <div class="modal-body">
+        <img src="/assets/images/wechat.jpeg" class="wechat-img" />
+        <div class="wechat-text">Scan to follow QITMEER on WeChat</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">close</button>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- <footer class="g-footer">
+  <section>{{ site.title }} ©
+    {% assign current = "now" | date: "%Y" | plus: 0%}
+    {% unless site.footer.since and site.footer.since == current %}
+    {{ site.footer.since }}
+    -
+    {% endunless %}
+    {{ current }}
+  </section>
+  <section>Powered by <a href="//jekyllrb.com">Jekyll</a> | <a href="https://github.com/kaeyleo/jekyll-theme-H2O">Theme
+      H2O</a></section>
+</footer> -->

@@ -1,0 +1,215 @@
+# Welcome to Jekyll!
+#
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Qitmeer
+email: support@hlc.com
+description: >- # this means to ignore newlines until "baseurl:"
+  Qitmeer.
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: Qitmeer
+github_username:  Qitmeer
+
+WhitepaperDownUrl: https://github.com/Qitmeer/whitepaper/releases
+
+#footer
+footer:
+  since: 2017
+
+
+# Build settings
+markdown: kramdown
+theme: minima
+
+
+# plugins:
+#   - jekyll-feed
+# plugins: [jekyll-paginate,jekyll-paginate-multiple]
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
+exclude: ['node_modules', 'dev', 'package.json', 'gulpfile.js', '.gitignore', 'README.md']
+
+paginate_multiple:
+  - paginate: 2
+    paginate_path: '/page:num/'
+    sub_dir: '/cn'
+  - paginate: 2
+    paginate_path: '/en/page:num/'
+    sub_dir: '/en'
+  - paginate: 5
+    paginate_path: '/news/page:num/'
+    sub_dir: '/news'
+  - paginate: 4
+    paginate_path: '/page:num/'
+    sub_dir: '/news'
+  - paginate: 15
+    paginate_path: '/faq/page:num/'
+    sub_dir: '/faq'
+  - paginate: 5
+    paginate_path: '/business/page:num/'
+    sub_dir: '/business'
+
+include: ["_pages"]
+
+menuLink:
+  Home:
+    link: "/"
+  Whitepaper:
+    link: "https://github.com/Qitmeer/whitepaper/releases"
+  News:
+    link: "/news/"
+  Product:
+    link: "/product/"
+  Community:
+    link: "https://www.qitmeertalk.org/"
+  Business:
+    link: "/business/"
+  Miner:
+    link: "/miner/"
+  Download:
+    link: "/download/"
+  FAQ:
+    link: "/faq/"
+  About:
+    link: "/about/"
+  Wallet:
+    link: "https://www.kahf.io/"
+  Document:
+    link: "https://qitmeer.github.io/docs/en/"
+  WalletDownload:
+    link:  "https://app.kahf.io/"
+  Explorer:
+    link: "https://meerscan.io/"
+  Pool:
+    link: "https://www.meerpool.com/"
+
+menu:
+  - name: Home
+    link: /
+  - name: News
+    link: /news/
+  - name: Product
+    submenu:
+      - name: Wallet
+        link: /wallet/
+      - name: Explorer
+        link: https://explorer.qitmeer.io
+      - name: Pool
+        link: https://www.meerpool.com/
+  - name: Community
+    link: https://www.qitmeertalk.org/
+  - name: Activity
+    link: http://activity.qitmeer.io/
+  - name: Business
+    link: /business/
+  - name: Miner
+    link: /miner/
+  - name: Download
+    link: "/download/"
+  - name: About
+    submenu:
+      - name: About us
+        link: /about/
+      - name: FAQ
+        link: /faq/
+
+social:
+  - icon: github
+    name: github
+    link: https://github.com/Qitmeer
+  - icon: twitter
+    name: twitter
+    link: https://twitter.com/QitmeerNetwork
+  - icon: facebook
+    name: facebook
+    link: https://www.facebook.com/QitmeerNetwork?ref=bookmarks
+  - icon: telegram
+    name: telegram
+    link: https://t.me/qitmeernetwork
+  - icon: instagram
+    name: instagram
+    link: https://www.instagram.com/qitmeernetwork/
+  - icon: linkedin
+    name: linkedin
+    link: https://www.linkedin.com/in/qitmeer-network-667844190/
+
+  # - icon: wechat
+  #   name: WECHAT
+  #   link: https://www.facebook.com/halalchain
+
+
+technology:
+  - img: security
+    title: Security
+    sub: Fully decentralized and 50% fault-tolerance.
+  - img: scalability
+    title: Scalability
+    sub: Fully exploit potential physical performance.
+  - img: fairness
+    title: Fairness
+    sub: Adoption of a collaboration model,<br/> reducing the risk of mining <br/>competition significantly.
+  - img: inclusion
+    title: Inclusion
+    sub: Multiple cross-chain protocols to <br/> integrate various use cases.
+  - img: intrisic
+    title: Intrisic Value Guarantee
+    sub: Tokens are converted from the same<br/> quantity of native currency,which  <br/>is mined by Proof-of-work.
+  - img: assets
+    title: Regulation friendly
+    sub: Authentication on assets issuance<br/> while keeping decentralization<br/> on infrastructure.
+
+mining:
+  Achieving a reasonable balance of security, openness, fairness, and scalability. Qitmeer uses the classic POW consensus and UTXO data model to create a pass-through issuing mechanism based on the underlying currency and subject to review, which fits the philosophy of equal finance.
+
+commercial:
+  - img: b-2
+    title: Smart sukui solutions
+    sub: Smart Sukuk in Islamic economy  is a tokenization by collecting funds from investors in exchange for Sukuk Tokens representing an ownership portion of the Sukuk investment.
+    link: /2019/06/19/SMART-SUKUK-SOLUTIONS.html
+  - img: b-2
+    title: Stable coins
+    sub: The use of Blockchain technology holds great potential across the Islamic economy and finance industry. One of the key principles of Islamic economy is based on having enforceable contracts which are fair, transparent and agreeable between the parties that engage in a banking transaction.
+    link: /2019/06/19/STABLE-COINS.html
+  - img: b-1
+    title: Smart islamic banking
+    sub: The Islamic financial sector has experienced substantial developments in the new century and has grown very rapidly both in size and number of institution.
+    link: /2019/06/19/SMART-ISLAMIC-BANKING.html
+
+
+Investors:
+  - img: /assets/images/Investors/keyin.jpg
+    title: 科银资本
+  - img: /assets/images/Investors/qtum.jpg
+    title: 量子基金会
+  - img: /assets/images/Investors/node.jpg
+    title: 节点资本
+  - img: /assets/images/Investors/xiangliang.jpg
+    title: 向量资本
+  - img: /assets/images/Investors/lebo.png
+    title: 乐博资本
+  - img: /assets/images/Investors/qiyuan.png
+    title: 起源资本
+  - img: /assets/images/Investors/ink_1.png
+    title: Ink基金会
+  - img: /assets/images/Investors/huaying.jpg
+    title: 华迎资本
+  - img: /assets/images/Investors/ub.png
+    title: UB资本
+  - img: /assets/images/Investors/huike.jpg
+    title: 辉客资本
+

@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    {% include head.html %}
+    <!--[if lt IE 10]>
+<div class="alert-danger" role="alert">你的浏览器实在太太太旧了，放学别走，升级完浏览器再说！<a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
+<![endif]-->
+    <div class="app-wrap">
+        {% include header.html %}
+        <div class="banner-wrap" id="banner">
+            <canvas id="canvas"></canvas>
+            <div class="container">
+                <div class="banner ">
+                    <div class="banner-left">
+                        <div class="banner-title" id="text"></div>
+                        <img src="/assets/images/blockchain.png" class="blockchain-img hidden-xs" />
+                    </div>
+                    <div class="banner-right">
+                        <div class='whitepaper'>Whitepaper</div>
+                        <div class="language-wrap">
+                            <a class="language-item" target="_blank" href="{{ site.WhitepaperDownUrl }}">
+                                <span>English</span>
+                                <i class="fa fa-angle-right language-narrow"></i>
+                            </a>
+                            <a href="{{ site.WhitepaperDownUrl }}" target="_blank" class="language-item">
+                                <span>Chinese</span>
+                                <i class="fa fa-angle-right language-narrow"></i>
+                            </a>
+                            <a href="{{ site.WhitepaperDownUrl }}" target="_blank" class="language-item">
+                                <span>Korean</span>
+                                <i class="fa fa-angle-right language-narrow"></i>
+                            </a>
+                            <a href='{{ site.WhitepaperDownUrl }}' target="_blank" class="language-item">
+                                <span>Arabic</span>
+                                <i class="fa fa-angle-right language-narrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="notice-wrap">
+            <div class="container ">
+                <div class="notice">
+                    <div class="notice-left">
+                        <i class="fa fa-inverse fa-volume-up notice-icon"></i>
+                        <div class="news-names">
+                            {% for item in site.categories.news %}
+                            <a href="{{item.url}}" class="news-name-item">{{item.title}}</a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <a href="{{ site.menuLink.News.link }}" class="notice-more">
+                        More
+                        <i class="fa fa-angle-right notice-narrow"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <section class="qitmeer-wrap">
+            <div class="container ">
+                <div class="row section-wrap">
+                    <img src="/assets/images/qitmeer-bg.png" class="qitmeer-bg hidden-xs" />
+                    <div class="qitmeer-left section-left col-sm-12 col-md-6 animate" data-animate="fadeInUp,2s,0">
+                        <div class="section-title">What is Qitmeer?</div>
+                        <div class="qitmeer-wrap">
+                            <div class="qitmeer-item">
+                                Qitmeer is the next generation public chain based on BlockDAG which is dedicated to
+                                serving the ecosystem of Islamic Finance, ethical finance, and socially responsible
+                                investment, thereby enhancing financial inclusion and creating social impact.
+                            </div>
+                            <div class="qitmeer-item">
+                                In contrast to the competition model, BlockDAG’s collaboration model in the mining
+                                achieves a desirable balance of typical blockchain metrics among the security, openness,
+                                fairness and scalability.
+
+                            </div>
+                            <div class="qitmeer-item">
+                                Qitmeer adopts a classic POW consensus and UTXO data model and designs a unique asset
+                                issuing mechanism which requires the reserve of native currency, which is in line with
+                                core ethical financial values.
+
+                            </div>
+                        </div>
+                        <div class="social-wrap">
+                            <div class="social-item">
+                                <a class="social-item-logo" href="{{ site.menuLink.Community.link }}">
+                                    <img src="/assets/images/logo.png" class="social-logo-img" />
+                                </a>
+                                <div class="social-name">qitmeer talk</div>
+                            </div>
+                            {% for item in site.social %}
+                            <div class="social-item">
+                                <a class="social-item-logo" target="_blank" href="{{item.link}}">
+                                    <i class="fa fa-{{item.icon}} social-icon"></i>
+                                </a>
+                                <div class="social-name">{{item.name}}</div>
+                            </div>
+                            {% endfor %}
+                            <div class="social-item">
+                                <a class="social-item-logo" style="cursor: pointer" data-toggle="modal"
+                                    data-target="#wechat">
+                                    <i class="fa fa-wechat social-icon"></i>
+                                </a>
+                                <div class="social-name">wechat</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qitmeer-right section-right col-sm-12 col-md-6">
+                        <img src="/assets/images/qitmeer.png" class="qitmeer-img hidden-xs">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="technology-wrap">
+            <div class="section-title section-center-title">Qitmeer Technology Highlights</div>
+            <div class="container technology animate" data-animate="fadeInUp,2s,0">
+                <div class="row technology-content">
+                    {% for item in site.technology %}
+                    <div class="technology-item col-xs-12 col-sm-6 col-md-4">
+                        <img src='/assets/images/{{item.img}}.png' />
+                        <div class="technology-title">{{item.title}}</div>
+                        <div class="technology-sub">{{item.sub}}</div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <section class="mining-wrap">
+            <div class="section-title section-center-title">Mining</div>
+            <div class="container">
+                <div class="row section-wrap ">
+                    <div class="mining-left col-xs-12 col-sm-6 animate" data-animate="fadeInLeft,2s,0">
+                        <div class="mining-content">
+                            {{site.mining}}
+                        </div>
+                        <a href="{{ site.menuLink.Miner.link }}" class="mining-more"><span>More</span><i
+                                class="fa fa-angle-right mining-more-icon"></i></a>
+                    </div>
+                    <div class="mining-right col-xs-12 col-sm-6">
+                        <img src="/assets/images/intro.jpeg" class="mining-img hidden-xs" />
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="roadmap-wrap ">
+            <div class="section-title section-center-title">Roadmap</div>
+            <div class="roadmap hidden-xs">
+                <div class="container roadmap-container animate " data-animate="fadeInUp,2s,0">
+                    <div class="roadmap-top">
+                        <div class="roadmap-item">
+                            <div class="roadmap-line"></div>
+                            <div class="roadmap-intro">
+                                <div class="roadmap-title">Dec 2017 Dec</div>
+                                <div class="roadmap-detail">Medina Network has been launched</div>
+                            </div>
+                        </div>
+                        <div class="roadmap-item">
+                            <div class="roadmap-line"></div>
+                            <div class="roadmap-intro">
+                                <div class="roadmap-title">Jun 2019 </div>
+                                <div class="roadmap-detail">Qitmeer source code was available on Github</div>
+                            </div>
+                        </div>
+                        <div class="roadmap-item">
+                            <div class="roadmap-line"></div>
+                            <div class="roadmap-intro">
+                                <div class="roadmap-title">Dec 2019 </div>
+                                <div class="roadmap-detail">Medina Network was officially launched</div>
+                            </div>
+                        </div>
+                        <div class="roadmap-item">
+                            <div class="roadmap-line"></div>
+                            <div class="roadmap-intro">
+                                <div class="roadmap-title">Oct 2020 </div>
+                                <div class="roadmap-detail">Launching Umayyad network economic model </div>
+                            </div>
+                        </div>
+                        <div class="roadmap-item">
+                            <div class="roadmap-line"></div>
+                            <div class="roadmap-intro">
+                                <div class="roadmap-title">Jun 2021</div>
+                                <div class="roadmap-detail">Officially launching Umayyad Network </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="roadmap-bottom">
+                        <div class="roadmap-item">
+                            <div class="roadmap-line"></div>
+                            <div class="roadmap-intro">
+                                <div class="roadmap-title">Mar 2018</div>
+                                <div class="roadmap-detail">Started the development of the Medina Network</div>
+                            </div>
+                        </div>
+                        <div class="roadmap-item">
+                            <div class="roadmap-line"></div>
+                            <div class="roadmap-intro">
+                                <div class="roadmap-title">Oct 2019</div>
+                                <div class="roadmap-detail">Published Medina Network economy model </div>
+                            </div>
+                        </div>
+                        <div class="roadmap-item">
+                            <div class="roadmap-line"></div>
+                            <div class="roadmap-intro">
+                                <div class="roadmap-title">May 2020</div>
+                                <div class="roadmap-detail">Implementing Medina network hard fork</div>
+                            </div>
+                        </div>
+                        <div class="roadmap-item">
+                            <div class="roadmap-line"></div>
+                            <div class="roadmap-intro">
+                                <div class="roadmap-title">Dec 2020</div>
+                                <div class="roadmap-detail">Launching Umayyad Network internal test network</div>
+                            </div>
+                        </div>
+                        <div class="roadmap-item">
+                            <div class="roadmap-line"></div>
+                            <div class="roadmap-intro">
+                                <div class="roadmap-title">2022</div>
+                                <div class="roadmap-detail">To be continued..</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="roadmap-mobile visible-xs">
+                <div class="roadmap-mobile-item">
+                    <div class="roadmap-item-line-wrap">
+                        <div class="roadmap-item-dot"></div>
+                        <div class="roadmap-item-line"></div>
+                    </div>
+                    <div class="roadmap-mobile-item-content">
+                        <div class="roadmap-mobile-item-time">Dec 2017 Dec</div>
+                        <div class="roadmap-mobile-item-detail">Medina Network has been launched </div>
+                    </div>
+                </div>
+                <div class="roadmap-mobile-item">
+                    <div class="roadmap-item-line-wrap">
+                        <div class="roadmap-item-dot"></div>
+                        <div class="roadmap-item-line"></div>
+                    </div>
+                    <div class="roadmap-mobile-item-content">
+                        <div class="roadmap-mobile-item-time">Mar 2018 </div>
+                        <div class="roadmap-mobile-item-detail">Started the development of the Medina Network</div>
+                    </div>
+                </div>
+                <div class="roadmap-mobile-item">
+                    <div class="roadmap-item-line-wrap">
+                        <div class="roadmap-item-dot"></div>
+                        <div class="roadmap-item-line"></div>
+                    </div>
+                    <div class="roadmap-mobile-item-content">
+                        <div class="roadmap-mobile-item-time">Jun 2019 </div>
+                        <div class="roadmap-mobile-item-detail">Qitmeer source code was available on Github</div>
+                    </div>
+                </div>
+                <div class="roadmap-mobile-item">
+                    <div class="roadmap-item-line-wrap">
+                        <div class="roadmap-item-dot"></div>
+                        <div class="roadmap-item-line"></div>
+                    </div>
+                    <div class="roadmap-mobile-item-content">
+                        <div class="roadmap-mobile-item-time">Oct 2019 </div>
+                        <div class="roadmap-mobile-item-detail">Published Medina Network economy model </div>
+                    </div>
+                </div>
+                <div class="roadmap-mobile-item">
+                    <div class="roadmap-item-line-wrap">
+                        <div class="roadmap-item-dot"></div>
+                        <div class="roadmap-item-line"></div>
+                    </div>
+                    <div class="roadmap-mobile-item-content">
+                        <div class="roadmap-mobile-item-time">Dec 2019 </div>
+                        <div class="roadmap-mobile-item-detail">Medina Network was officially launched</div>
+                    </div>
+                </div>
+                <div class="roadmap-mobile-item">
+                    <div class="roadmap-item-line-wrap">
+                        <div class="roadmap-item-dot"></div>
+                        <div class="roadmap-item-line"></div>
+                    </div>
+                    <div class="roadmap-mobile-item-content">
+                        <div class="roadmap-mobile-item-time">May 2020 </div>
+                        <div class="roadmap-mobile-item-detail">Implementing Medina network hard fork </div>
+                    </div>
+                </div>
+                <div class="roadmap-mobile-item">
+                    <div class="roadmap-item-line-wrap">
+                        <div class="roadmap-item-dot"></div>
+                        <div class="roadmap-item-line"></div>
+                    </div>
+                    <div class="roadmap-mobile-item-content">
+                        <div class="roadmap-mobile-item-time">Oct 2020</div>
+                        <div class="roadmap-mobile-item-detail">Launching Umayyad network economic model </div>
+                    </div>
+                </div>
+                <div class="roadmap-mobile-item">
+                    <div class="roadmap-item-line-wrap">
+                        <div class="roadmap-item-dot"></div>
+                        <div class="roadmap-item-line"></div>
+                    </div>
+                    <div class="roadmap-mobile-item-content">
+                        <div class="roadmap-mobile-item-time">Dec 2020 </div>
+                        <div class="roadmap-mobile-item-detail">Launching Umayyad Network internal test network</div>
+                    </div>
+                </div>
+                <div class="roadmap-mobile-item">
+                    <div class="roadmap-item-line-wrap">
+                        <div class="roadmap-item-dot"></div>
+                        <div class="roadmap-item-line"></div>
+                    </div>
+                    <div class="roadmap-mobile-item-content">
+                        <div class="roadmap-mobile-item-time">Jun 2021 </div>
+                        <div class="roadmap-mobile-item-detail">Officially launching Umayyad Network </div>
+                    </div>
+                </div>
+                <div class="roadmap-mobile-item">
+                    <div class="roadmap-item-line-wrap">
+                        <div class="roadmap-item-dot"></div>
+                        <div class="roadmap-item-line"></div>
+                    </div>
+                    <div class="roadmap-mobile-item-content">
+                        <div class="roadmap-mobile-item-time">2022 </div>
+                        <div class="roadmap-mobile-item-detail">To be continued..</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="wallet-wrap">
+            <div class="container">
+                <div class="row section-wrap">
+                    <div class="wallet-left col-xs-12 col-sm-6">
+                        <img src="/assets/images/wallet-img.png" class="wallet-img" />
+                    </div>
+                    <div class="wallet-right col-xs-12 col-sm-6 animate" data-animate="fadeInRight,2s,0">
+                        <div class="section-title section-right-title">Kahf Wallet</div>
+                        <div class="wallet-content">The wallet is developed by the Qitmeer team, which is supported by
+                            IOS, Android.Click the link below to download.</div>
+                        <div class="wallet-download">
+                            <a href="{{site.menuLink.WalletDownload.link}} " target="_blank" class="wallet-btn">
+                                <i class="fa fa-apple wallet-icon"></i>
+                                <div class="wallet-intro">
+                                    <div class="wallet-phone">Ios</div>
+                                    <!-- <div class="wallet-suit">For iPhone/iPad downloads</div> -->
+                                </div>
+                            </a>
+                            <a href="{{site.menuLink.WalletDownload.link}} " target="_blank" class="wallet-btn">
+                                <i class="fa fa-android wallet-icon"></i>
+                                <div class="wallet-intro">
+                                    <div class="wallet-phone">Android</div>
+                                    <!-- <div class="wallet-suit">For Android version download</div> -->
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section class="commercial-wrap">
+            <div class="section-title section-center-title">Ecosystem</div>
+            <div class="container">
+                <div class="row commercial animate" data-animate="fadeInUp,2s,0">
+
+                    {% for item in site.categories.business %}
+                    <div class="col-sm-12 col-sm-4 mb-3">
+                        <div class="commercial-item">
+                            <div class="item-img-wrap">
+                                <img src="{{item.thumbnail}}" />
+                            </div>
+                            <div class="commercial-item-content">
+                                <div class="commercial-title">{{item.title}}</div>
+                                <div class="commercial-sub">
+                                    {{item.content | strip_html | strip_newlines | truncate: 150 }}</div>
+                                <a href="{{item.url}}" class="commercial-more">
+                                    More
+                                    <i class="fa fa-angle-right commercial-more-icon"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <section class="team-wrap">
+            <div class="section-title section-center-title">Team</div>
+            <!-- <div class="container"> -->
+            <div id="myCarousel" class="container carousel slide animate" data-animate="fadeInUp,2s,0">
+                <div class="carousel-inner team">
+                    <div class="item active ">
+                        <div class="team-item-wrap">
+                            <div class="team-item col-xs-6 col-md-3">
+                                <div class="team-item-img team-item-img3"></div>
+                                <div class="team-user">
+                                    <div class="team-name">Prof. Abdussalam I. Onagun</div>
+                                    <div class="team-position">Co-Founder</div>
+                                </div>
+                                <div class="team-intro">Prof. Abdussalam I. Onagun co-founder of HalalChain is an
+                                    acknowledged industry expert in the philosophy of blockchain technology within the
+                                    Islamic Economy.</div>
+                            </div>
+                            <div class="team-item col-xs-6 col-md-3">
+                                <div class="team-item-img team-item-img2"></div>
+                                <div class="team-user">
+                                    <div class="team-name">Abdullah Han</div>
+                                    <div class="team-position">Co-founder</div>
+                                </div>
+                                <div class="team-intro">Mr. Abdullah Han co-founder of HalalChain is passionate about
+                                    helping to develop businesses into becoming global brands.</div>
+                            </div>
+                            <div class="team-item col-xs-6 col-md-3">
+                                <div class="team-item-img team-item-img1"></div>
+                                <div class="team-user">
+                                    <div class="team-name">Dr. Sulaiman Liu</div>
+                                    <div class="team-position">Co-Founder</div>
+                                </div>
+                                <div class="team-intro">A passionate advocator of Islamic Finance & Economy and Islamic
+                                    Investment banker.</div>
+                            </div>
+                            <div class="team-item col-xs-6 col-md-3">
+                                <div class="team-item-img team-item-img12"></div>
+                                <div class="team-user">
+                                    <div class="team-name">Effendy Zulkifly</div>
+                                    <div class="team-position">Co-Founder</div>
+                                </div>
+                                <div class="team-intro">Effendy Zulkifly is the co-founder of Crypto
+                                    Valley Malaysia, author of the books in Blockchain
+                                    Tech and IR4.0. He is a passionate technologist that
+                                    related to blockchain and emerging tech, digital
+                                    transformation, and IoT.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item ">
+                        <div class="team-item-wrap">
+                            <div class="team-item col-xs-6 col-md-3">
+                                <div class="team-item-img team-item-img4"></div>
+                                <div class="team-user">
+                                    <div class="team-name">Ronald Yousuf Wijaya</div>
+                                    <div class="team-position">Co-Founder</div>
+                                </div>
+                                <div class="team-intro">Ronald Yusuf Wijaya is the chairman of Indonesia Sharia Fintech
+                                    Association, he also Co-founding the two pioneering Global Islamic Fintech
+                                    platforms.</div>
+                            </div>
+                            <div class="team-item col-xs-6 col-md-3">
+                                <div class="team-item-img team-item-img5"></div>
+                                <div class="team-user">
+                                    <div class="team-name">Prof. Datuk Rifaat Ahmed Abdel Karim</div>
+                                    <div class="team-position">Advisor</div>
+                                </div>
+                                <div class="team-intro">Professor Rifaat has an international reputation as a leader and
+                                    authority in the Islamic financial services industry (IFSI) at both the professional
+                                    and the academic levels.</div>
+                            </div>
+                            <div class="team-item col-xs-6 col-md-3">
+                                <div class="team-item-img team-item-img6"></div>
+                                <div class="team-user">
+                                    <div class="team-name">Mohammed Burhan Arbouna</div>
+                                    <div class="team-position">Advisor</div>
+                                </div>
+                                <div class="team-intro">Dr. Mohammed Burhan Arbouna is an expert in Islamic banking and
+                                    finance and a Sharia Board member in a number of Islamic institutions.
+
+                                </div>
+                            </div>
+                            <div class="team-item col-xs-6 col-md-3">
+                                <div class="team-item-img team-item-img7"></div>
+                                <div class="team-user">
+                                    <div class="team-name">Yen Wan Zaheran</div>
+                                    <div class="team-position">Advisor</div>
+                                </div>
+                                <div class="team-intro">Non-executive Director of YMM (Mal) SDN. BHD.
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="team-item-wrap">
+                            <div class="team-item col-xs-6 col-md-3">
+                                <div class="team-item-img team-item-img8"></div>
+                                <div class="team-user">
+                                    <div class="team-name">Dr. Farrukh Habib</div>
+                                    <div class="team-position">Advisor</div>
+                                </div>
+                                <div class="team-intro">Dr. Farrukh Habib is a notable expert in the field of Sharia and
+                                    Islamic finance.
+
+                                </div>
+                            </div>
+                            <div class="team-item col-xs-6 col-md-3">
+                                <div class="team-item-img team-item-img9"></div>
+                                <div class="team-user">
+                                    <div class="team-name">Umar Munshi</div>
+                                    <div class="team-position">Advisor</div>
+                                </div>
+                                <div class="team-intro">Founder and CEO of EthisCrowd.com, a Real Estate Islamic
+                                    Crowdfunding Investment platform and Chairman of Islamic Fintech Alliance.
+
+                                </div>
+                            </div>
+                            <div class="team-item col-xs-6 col-md-3">
+                                <div class="team-item-img team-item-img10"></div>
+                                <div class="team-user">
+                                    <div class="team-name">Ronnie Faizal Tan</div>
+                                    <div class="team-position">Advisor</div>
+                                </div>
+                                <div class="team-intro">Ronnie Faizal Tan is the Chairman of the Singapore-based
+                                    MyOutlets group, companies with an exclusive focus on halal food and beverages and
+                                    consumer products.</div>
+                            </div>
+                            <div class="team-item col-xs-6 col-md-3">
+                                <div class="team-item-img team-item-img11"></div>
+                                <div class="team-user">
+                                    <div class="team-name">Dr. Omar Fisher</div>
+                                    <div class="team-position">Advisor</div>
+                                </div>
+                                <div class="team-intro">Serial entrepreneur in Islamic financial services,
+                                    thought-leader in Takaful-Islamic Insurance, educator in management services and
+                                    strategic management consultant etc.</div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+                <!-- 轮播（Carousel）导航 -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+            <!-- </div> -->
+        </section>
+        <section class="team-wrap">
+            <div class="section-title section-center-title">Investors</div>
+            <div class="container">
+                <div class="investors-item">
+                    {% for item in site.Investors %}
+                    <div class="investors-item-wrap">
+                        <div class="investors-item-img-wrap">
+                            <img src="{{item.img}}" class="investors-logo" />
+                        </div>
+                        <!-- <div class="commercial-title">{{item.title}}</div> -->
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        {{ content }}
+        {% include footer.html %}
+
+    </div>
+    <script src="/assets/js/index.min.js"></script>
+    <script src="/assets/js/canvas.min.js"></script>
+</body>
+
+</html>

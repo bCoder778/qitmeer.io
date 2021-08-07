@@ -1,0 +1,35 @@
+<input type="hidden" id="total_pages" value="{{ paginator.total_pages }}">
+<input type="hidden" id="current_pages" value="{{ paginator.page }}">
+<input type="hidden" id="base_url" value="{{ "/news/" | relative_url }}">
+<input type="hidden" id="previous_page" value="{{ paginator.previous_page }}">
+<input type="hidden" id="next_page" value="{{ paginator.next_page }}">
+
+<nav aria-label="Page navigation">
+        <div id="page-link-container"></div>
+    <!-- <ul class="pagination">
+        {% if paginator.previous_page %}
+        {% if paginator.previous_page == 1 %}
+        <li>
+            <a href="{{ "/news/" | relative_url }}" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        {% else %}
+        <li>
+            <a href="/news/page{{ paginator.previous_page }}/" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+            </a>
+        </li>
+        {% endif %}
+        {% endif %}
+        
+        {% if paginator.next_page %}
+        <li>
+            <a href="/news/page{{ paginator.next_page }}/" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+            </a>
+        </li>
+        {% endif %}
+
+    </ul> -->
+</nav>

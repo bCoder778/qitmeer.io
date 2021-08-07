@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+    {% include head.html %}
+    {% include header.html %}
+    <!--[if lt IE 10]>
+<div class="alert-danger" role="alert">你的浏览器实在太太太旧了，放学别走，升级完浏览器再说！<a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
+<![endif]-->
+
+    <!-- <div class="banner-news container">
+        <p class="banner-tip1"># News #</p>
+        <p class="banner-tip2">Keep up with the Times and Master Real-time Information</p>
+    </div> -->
+    <div class="banner-common">
+        <canvas id="canvas"></canvas>
+        <div class="container banner-common-img">
+        </div>
+    </div>
+    <div class="visible container news-container">
+        {{ content }}
+        <div class="pagination-wrap">{% include pagination.html %}</div>
+    </div>
+
+    {% include footer.html %}
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/assets/js/canvas.min.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,15 @@
+<div class="list_item">
+    <article class="news_item">
+        <div class="news_item_left">
+            <a class="title" href="{{ post.url }}">{{ post.title }}</a>
+            <p class="time"><span class="glyphicon glyphicon-time" aria-hidden="true"></span><time
+                    datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %d, %Y" }}</time></p>
+            <p class="des">{{post.content | strip_html | strip_newlines | truncate: 100 }}</p>
+        </div>
+
+        {% if post.thumbnail %}
+        <div class="news_item_right"><a href="{{ post.url }}"><img class="new_item_img"
+                    src="{{ post.thumbnail }}" /></a></div>
+        {% endif %}
+    </article>
+</div>

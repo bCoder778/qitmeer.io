@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<body>
+    {% include head.html %}
+    <!--[if lt IE 10]>
+<div class="alert-danger" role="alert">你的浏览器实在太太太旧了，放学别走，升级完浏览器再说！<a target="_blank" class="alert-link" href="http://browsehappy.com">立即升级</a></div>
+<![endif]-->
+    <div class="visible">
+      {% include header.html %}
+      {{ content }}
+      {% include footer.html %}
+    </div>
+ 
+    <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script> 
+    <script src="/assets/js/canvas.min.js"></script>  
+
+</body>
+</html>
